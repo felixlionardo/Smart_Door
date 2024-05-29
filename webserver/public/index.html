@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>BeagleBone Beat-Box</title>
+	<meta charset="UTF-8">
+	<link rel='stylesheet' href='/stylesheets/stylesheet.css'></link>
+</head>
+
+<body>
+<form>
+	<h1>Smart Door</h1>
+	<div>by Felix Lionardo, Ryan Ly</div>
+
+	<h1>VIDEO</h1>
+	<canvas id='videostream' width='640' height='360'></canvas>
+	
+	<div id='content'>
+		<div id='status-box'>
+			<h2>Temperature Sensor</h2>
+
+			<span id="temp_value"></span> 
+			<p id="temp_unit"> C</p>
+			<input type="button" id="celcius" value="Celcius"/>
+			<input type="button" id="fahrenheit" value="Fahrenheit"/>
+		</div>
+		<div id='left-box'>
+			<div id='modediv'>
+				<h2>Door Lock</h2>
+				<p>Current door lock status is: <strong><span id="modeid"></span></strong></p>
+				<p>
+					<input type="button" id="lock"  value="Lock"/>
+					<input type="button" id="unlock" value="Unlock"/>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<p>Email Address</p>
+	<input type="text" id="userInput">
+	<input type="button" onclick="appendInput()" value="Add"/>
+	<input type="button" onclick="clearInputs()" value="Clear"/>
+    <div id="displayArea"></div>
+
+		<div id='error-box'>
+			<h2>Server Error</h2>
+			<p>Server error detected. Please resolve error before continuing.</p>
+		</div>
+
+	</div>
+</form>
+
+	<script src='/socket.io/socket.io.js' type='text/javascript'></script>
+	<script src='http://code.jquery.com/jquery-1.11.1.min.js' type='text/javascript'></script>
+
+	<script src='javascripts/beatbox_ui.js' type='text/javascript'></script>
+</body>
+</html>

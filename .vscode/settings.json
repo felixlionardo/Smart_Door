@@ -1,0 +1,6 @@
+{
+    "cmake.sourceDirectory": "/home/felix/cmpt433/work/Smart Door/beagle_bone",
+    "files.associations": {
+        "general_command.h": "c"
+    }
+}
